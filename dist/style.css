@@ -1,0 +1,236 @@
+    body{
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+    input{
+        margin-bottom: 10px;
+    }
+    input,button{
+        outline: none;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .button{
+        padding: 10px;
+        background-color: #e3c47a;
+        border: none;
+        font-size: 1rem;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: .2s;
+        color: #333 !important;
+    }
+    .button:hover{
+        background-color: #fdd169;
+    }
+    .button:active{
+        background-color: #f9d787;
+    }
+    .disable{
+        background-color: #aaa !important;
+        cursor: default;
+    }
+    .form-container{
+        height: 100%;
+        width: 100%;
+        background-color: #222222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-container__open-form{
+        position: absolute;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .form{
+        position: relative;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #313131;
+        padding: 15px;
+        width: 300px;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+    .form__close{
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+    }
+    .form__close i{
+        color: #aaa;
+        transition: .2s;
+    }
+    .form__close:hover i{
+        color: #ddd;
+    }
+    .form__close:active i{
+        color: #888;
+    }
+    .form__title{
+        font-size: 1.4rem;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #eee;
+    }
+    .form__inputs-wrapper,
+    .form__action-container{
+        width: 270px;
+    }
+    .form__input-container{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .form__input-container i{
+        margin-top: -6px;
+        position: absolute;
+        color: #999;
+        transition: .2s;
+    }
+    .form__input-container.form__email .input-field.error{
+        border-bottom-color: #f00;
+        color: #f00;
+    }
+    .form__input-container.focus .input-field{
+        border-bottom: 1px solid #ccc;
+    }
+    .form__input-container.focus i{
+        color: #ccc;
+    }
+    .input-field{
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #999;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 30px;
+        color: #ddd;
+        font-size: 0.85rem;
+        transition: .2s;
+        width: 100%;
+    }
+    .form__button{
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .form__password-visible{
+        width: 20px;
+        position: absolute;
+        right: 0;
+        margin-top: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 1px;
+        cursor: pointer;
+    }
+    .form__password-visible i{
+        position: absolute;
+    }
+    .form__password-visible i.fa-eye-slash,
+    .form__password-visible.pass_vis i.fa-eye{
+        display: none;
+    }
+    .form__password-visible.pass_vis i.fa-eye-slash,
+    .form__password-visible i.fa-eye{
+        display: block;
+    }
+    .form__remember {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .form__remember-toggle{
+        display: none;
+    }
+    .form__remebmer-text{
+        color: #aaa;
+        font-size: 0.85rem;
+    }
+    .form__remember-toggle + label {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        width: 40px;
+        height: 18px;
+    }
+    .form__remember-toggle + label:before {
+        right: 0px;
+        background-color: #555;
+        border-radius: 18px;
+        transition: .2s;
+        width: 100%;
+    }
+    .form__remember-toggle + label:after {
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        border-radius: 100%;
+        transition: .2s;
+        margin-top: 3px;
+        margin-left: 3px;
+    }
+    .form__remember-toggle + label:before, .form__remember-toggle + label:after {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        content: "";
+    }
+    .form__remember-toggle:checked + label:before {
+        background-color: #e3c47a;
+    }
+    .form__remember-toggle:checked + label:after {
+        margin-left: 25px;
+        box-shadow: 1px 1px 3px #000;
+    }
+    @media all and (min-width: 321px){
+        .form{
+            width: 330px;
+        }
+        .form__inputs-wrapper,
+        .form__action-container{
+            width: 290px;
+        }
+    }
+    @media all and (min-width: 768px) and (max-width: 1024px){
+        .form{
+            width: 600px;
+        }
+        .form__title{
+            padding-bottom: 25px;
+        }
+        .form__inputs-wrapper,
+        .form__action-container{
+            width: 540px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .input-field, .form__remember, .form__button{
+            width: 260px;
+        }
+    }
+    @media all and (min-width: 1025px){
+        .form{
+            width: 600px;
+        }
+        .form__title{
+            font-size: 1.8rem;
+        }
+        .form__inputs-wrapper,
+        .form__action-container{
+            width: 540px;
+        }
+    }

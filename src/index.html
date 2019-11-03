@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>LeningradMedia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <div class="form-container">
+            <div class="form-container__open-form button">Авторизироваться</div>
+            <form class="form">
+                <div class="form__close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <span class="form__title">Авторизация</span>
+                <div class="form__inputs-wrapper">
+                <div class="form__input-container form__email">
+                    <i class="fas fa-user"></i>
+                    <input type="email" name="e-mail" placeholder="E-mail" class="input-field">
+                </div>
+                <div class="form__input-container form__password">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="pass" placeholder="Пароль" class="input-field">
+                    <div class="form__password-visible">
+                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
+                </div>
+                </div>
+                <div class="form__action-container">
+                <div class="form__remember">
+                    <span class="form__remebmer-text">Запомнить меня</span>
+                    <input type="checkbox" class="form__remember-toggle" id="form__remember-toggle-l" name="rem">
+                    <label for="form__remember-toggle-l"></label>
+                </div>
+                <button class="button form__button disable" disabled="disabled">Авторизироваться</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
